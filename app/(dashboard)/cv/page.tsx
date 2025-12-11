@@ -295,16 +295,25 @@ export default function CVPage() {
             padding: 0;
           }
 
-          /* Make CV full width in print */
+          /* Make CV full width in print and remove centering */
           .min-h-screen {
-            min-height: auto;
+            min-height: auto !important;
+            height: auto !important;
             padding: 0 !important;
             background: white !important;
+            display: block !important;
+            align-items: flex-start !important;
           }
 
-          /* Remove shadow in print */
+          /* Remove shadow in print and ensure no max-width constraint */
           .shadow-2xl {
             box-shadow: none !important;
+            max-width: 100% !important;
+          }
+
+          /* Ensure CV starts at top of page */
+          body > div {
+            page-break-before: avoid !important;
           }
 
           /* Ultra compact spacing for print */
@@ -441,9 +450,10 @@ export default function CVPage() {
             margin-top: 0.5rem !important;
           }
 
-          /* Make project grid more compact */
+          /* Force project grid to 3 columns in print */
           .grid.grid-cols-1.md\\:grid-cols-3 {
             gap: 0.5rem !important;
+            grid-template-columns: 1fr 1fr 1fr !important;
           }
 
           /* Compact tag badges */
