@@ -115,27 +115,27 @@ export default function CVPage() {
               <h2 className="text-2xl font-bold text-blue-500 mb-3 pb-2 border-b-4 border-blue-500 inline-block">KEAHLIAN TEKNIS</h2>
               <div className="mt-3 space-y-3">
                 <div className="bg-gradient-to-r from-pink-50 to-red-50 p-3 rounded-lg border-l-4 border-red-500">
-                  <div className="font-semibold text-sm">Frontend Development</div>
+                  <div className="font-semibold text-sm text-gray-900">Frontend Development</div>
                   <div className="text-xs text-gray-600">Next.js, React, TypeScript, Tailwind CSS</div>
                 </div>
                 <div className="bg-gradient-to-r from-pink-50 to-red-50 p-3 rounded-lg border-l-4 border-red-500">
-                  <div className="font-semibold text-sm">Backend Development</div>
+                  <div className="font-semibold text-sm text-gray-900">Backend Development</div>
                   <div className="text-xs text-gray-600">Node.js, tRPC, Prisma, PostgreSQL</div>
                 </div>
                 <div className="bg-gradient-to-r from-pink-50 to-red-50 p-3 rounded-lg border-l-4 border-red-500">
-                  <div className="font-semibold text-sm">Database</div>
+                  <div className="font-semibold text-sm text-gray-900">Database</div>
                   <div className="text-xs text-gray-600">PostgreSQL, Supabase, MongoDB, Redis</div>
                 </div>
                 <div className="bg-gradient-to-r from-pink-50 to-red-50 p-3 rounded-lg border-l-4 border-red-500">
-                  <div className="font-semibold text-sm">Tools & DevOps</div>
+                  <div className="font-semibold text-sm text-gray-900">Tools & DevOps</div>
                   <div className="text-xs text-gray-600">Git, Docker, Vercel, PWA</div>
                 </div>
                 <div className="bg-gradient-to-r from-pink-50 to-red-50 p-3 rounded-lg border-l-4 border-red-500">
-                  <div className="font-semibold text-sm">Typing Speed</div>
+                  <div className="font-semibold text-sm text-gray-900">Typing Speed</div>
                   <div className="text-xs text-gray-600">80 WPM</div>
                 </div>
                 <div className="bg-gradient-to-r from-pink-50 to-red-50 p-3 rounded-lg border-l-4 border-red-500">
-                  <div className="font-semibold text-sm">System Administration</div>
+                  <div className="font-semibold text-sm text-gray-900">System Administration</div>
                   <div className="text-xs text-gray-600">Windows & Linux Installation</div>
                 </div>
               </div>
