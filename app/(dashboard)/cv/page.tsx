@@ -1,8 +1,23 @@
 "use client";
 
+import { Download } from "lucide-react";
+
 export default function CVPage() {
+  const handleDownloadPDF = () => {
+    window.print();
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center p-2 md:p-6">
+      {/* Download Button - Hidden on print */}
+      <button
+        onClick={handleDownloadPDF}
+        className="fixed top-20 right-4 md:top-24 md:right-8 z-50 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg shadow-lg flex items-center gap-2 print:hidden transition-colors"
+      >
+        <Download className="w-5 h-5" />
+        <span className="hidden md:inline">Download PDF</span>
+      </button>
+
       <div className="w-full md:max-w-[210mm] bg-white shadow-2xl overflow-hidden">
         {/* Header */}
         <div className="bg-gradient-to-r from-purple-600 to-purple-800 text-white p-4 md:p-8 relative overflow-hidden">
@@ -243,6 +258,53 @@ export default function CVPage() {
           Created with ❤️ by Abdul Gofur | 2025
         </div>
       </div>
+
+      {/* Print Styles */}
+      <style jsx global>{`
+        @media print {
+          /* Remove default margins and set page size */
+          @page {
+            size: A4;
+            margin: 0;
+          }
+
+          /* Ensure backgrounds and colors print */
+          * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+            color-adjust: exact !important;
+          }
+
+          /* Hide scrollbars and shadows for print */
+          body {
+            margin: 0;
+            padding: 0;
+          }
+
+          /* Make CV full width in print */
+          .min-h-screen {
+            min-height: auto;
+            padding: 0 !important;
+            background: white !important;
+          }
+
+          /* Remove shadow in print */
+          .shadow-2xl {
+            box-shadow: none !important;
+          }
+
+          /* Ensure proper page breaks */
+          .space-y-6 > div,
+          .space-y-3 > div {
+            page-break-inside: avoid;
+          }
+
+          /* Make links visible in print */
+          a[href]:after {
+            content: none !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }
