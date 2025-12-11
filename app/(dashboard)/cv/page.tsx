@@ -2,7 +2,7 @@
 
 export default function CVPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-purple-600 to-purple-800">
+    <div className="min-h-screen flex items-center justify-center p-6">
       <div className="w-full max-w-[210mm] min-h-[330mm] bg-white shadow-2xl overflow-hidden">
         {/* Header */}
         <div className="bg-gradient-to-r from-purple-600 to-purple-800 text-white p-8 relative overflow-hidden">
