@@ -6,8 +6,13 @@ import { ongoingProjects } from "@/lib/data/ongoingProjects";
 import { personalInfo } from "@/lib/data/personalInfo";
 import { Briefcase, Clock, Code, TrendingUp } from "lucide-react";
 import Link from "next/link";
+import { useLanguage } from "@/lib/context/LanguageContext";
+import { translations } from "@/lib/translations";
 
 export default function DashboardPage() {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <div className="max-w-7xl mx-auto space-y-8">
       {/* Welcome Section */}
@@ -16,17 +21,17 @@ export default function DashboardPage() {
         animate={{ opacity: 1, y: 0 }}
         className="bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl p-8 text-white"
       >
-        <h1 className="text-4xl font-bold mb-2">Welcome! 👋</h1>
-        <p className="text-xl opacity-90 mb-4">{personalInfo.tagline}</p>
-        <p className="opacity-80">{personalInfo.bio}</p>
+        <h1 className="text-4xl font-bold mb-2">{t.welcome}</h1>
+        <p className="text-xl opacity-90 mb-4">{t.tagline}</p>
+        <p className="opacity-80">{t.bio}</p>
       </motion.div>
 
       {/* Stats */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {[
-          { icon: Briefcase, label: "Experience", value: personalInfo.stats.experience },
-          { icon: Code, label: "Projects", value: personalInfo.stats.projectsCompleted },
-          { icon: TrendingUp, label: "Technologies", value: personalInfo.stats.technologiesMastered }
+          { icon: Briefcase, label: t.experience, value: personalInfo.stats.experience },
+          { icon: Code, label: t.projects, value: personalInfo.stats.projectsCompleted },
+          { icon: TrendingUp, label: t.technologies, value: personalInfo.stats.technologiesMastered }
         ].map((stat, index) => (
           <motion.div
             key={stat.label}
@@ -49,8 +54,8 @@ export default function DashboardPage() {
         transition={{ delay: 0.3 }}
       >
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-2xl font-bold">Completed Projects</h2>
-          <span className="text-sm text-zinc-500">{projects.length} projects</span>
+          <h2 className="text-2xl font-bold">{t.completedProjects}</h2>
+          <span className="text-sm text-zinc-500">{projects.length} {t.projectsCount}</span>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
@@ -94,9 +99,9 @@ export default function DashboardPage() {
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-2xl font-bold flex items-center gap-2">
             <Clock className="w-6 h-6" />
-            Ongoing Projects
+            {t.ongoingProjects}
           </h2>
-          <span className="text-sm text-zinc-500">{ongoingProjects.length} in progress</span>
+          <span className="text-sm text-zinc-500">{ongoingProjects.length} {t.inProgress}</span>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {ongoingProjects.map((project) => (

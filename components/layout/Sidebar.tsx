@@ -16,6 +16,8 @@ import {
   Menu,
   X
 } from "lucide-react";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { AvatarImage } from "@/components/AvatarImage";
 
 const sidebarItems = [
   { name: "Home", href: "/", icon: Home },
@@ -67,24 +69,15 @@ export function Sidebar() {
     <div className="flex flex-col h-full">
       {/* Header */}
       <div className="p-4 border-b border-zinc-200 dark:border-zinc-800">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-emerald-500/20 shrink-0">
-            <Image
-              src="/avatar.jpg"
-              alt="Abdul Gofur"
-              fill
-              className="object-cover"
-              sizes="40px"
-              priority
-            />
-          </div>
+        <div className="flex items-center gap-3">
+          <AvatarImage size={40} priority />
           {isOpen && (
-            <div className="min-w-0">
+            <Link href="/" className="min-w-0">
               <h2 className="font-bold text-sm truncate">Abdul Gofur</h2>
               <p className="text-xs text-zinc-500 dark:text-zinc-400 truncate">Full-stack Dev</p>
-            </div>
+            </Link>
           )}
-        </Link>
+        </div>
       </div>
 
       {/* Navigation */}
@@ -154,9 +147,14 @@ export function Sidebar() {
         })}
       </nav>
 
-      {/* Footer - Toggle Collapse (Desktop only) */}
+      {/* Footer - Language Switcher & Toggle (Desktop only) */}
       {!isMobileOpen && (
-        <div className="hidden lg:block p-4 border-t border-zinc-200 dark:border-zinc-800">
+        <div className="hidden lg:block p-4 border-t border-zinc-200 dark:border-zinc-800 space-y-2">
+          {isOpen && (
+            <div className="mb-2">
+              <LanguageSwitcher />
+            </div>
+          )}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="w-full flex items-center justify-center px-3 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
