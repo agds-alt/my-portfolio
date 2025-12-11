@@ -444,6 +444,11 @@ export default function CVPage() {
             left: -0.3rem !important;
           }
 
+          /* Force project section to span 2 columns (full width) */
+          .col-span-1.md\\:col-span-2 {
+            grid-column: 1 / -1 !important;
+          }
+
           /* Reduce project section padding */
           .bg-gradient-to-br.from-purple-50 {
             padding: 0.5rem !important;
@@ -454,6 +459,7 @@ export default function CVPage() {
           .grid.grid-cols-1.md\\:grid-cols-3 {
             gap: 0.5rem !important;
             grid-template-columns: 1fr 1fr 1fr !important;
+            display: grid !important;
           }
 
           /* Compact tag badges */
