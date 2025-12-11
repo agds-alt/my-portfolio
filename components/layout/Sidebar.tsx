@@ -14,7 +14,8 @@ import {
   User,
   Mail,
   Menu,
-  X
+  X,
+  FileText
 } from "lucide-react";
 import { AvatarImage } from "@/components/AvatarImage";
 import { useLanguage } from "@/lib/context/LanguageContext";
@@ -49,6 +50,7 @@ export function Sidebar() {
         { name: t.iotMonitoring, href: "/ongoing/monitoring-platform" }
       ]
     },
+    { name: t.cv, href: "/cv", icon: FileText },
     { name: t.contact, href: "/contact", icon: Mail }
   ];
 

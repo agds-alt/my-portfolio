@@ -26,6 +26,7 @@ export const translations = {
     home: "Home",
     about: "About",
     contact: "Contact",
+    cv: "Curriculum Vitae",
 
     // Sidebar Projects
     wcCheck: "WC Check",
@@ -69,6 +70,7 @@ export const translations = {
     home: "Beranda",
     about: "Tentang",
     contact: "Kontak",
+    cv: "Curriculum Vitae",
 
     // Sidebar Projects
     wcCheck: "WC Check",
