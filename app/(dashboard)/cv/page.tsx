@@ -1,6 +1,7 @@
 "use client";
 
 import { Download } from "lucide-react";
+import Image from "next/image";
 
 export default function CVPage() {
   const handleDownloadPDF = () => {
@@ -22,10 +23,23 @@ export default function CVPage() {
         {/* Header */}
         <div className="bg-gradient-to-r from-purple-600 to-purple-800 text-white p-4 md:p-8 relative overflow-hidden">
           <div className="absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full"></div>
-          <div className="relative z-10">
-            <h1 className="text-3xl md:text-5xl font-bold mb-2 tracking-wide">ABDUL GOFUR</h1>
-            <div className="text-base md:text-xl font-light mb-2 md:mb-3">Full-stack Developer & Web Application Specialist</div>
-            <div className="text-xs md:text-sm italic opacity-90">Building scalable web applications with modern technologies</div>
+          <div className="relative z-10 flex items-center gap-4">
+            {/* Photo */}
+            <div className="shrink-0">
+              <Image
+                src="/avatar.jpg"
+                alt="Abdul Gofur"
+                width={80}
+                height={80}
+                className="rounded-full border-4 border-white/30"
+              />
+            </div>
+            {/* Text Content */}
+            <div className="flex-1">
+              <h1 className="text-3xl md:text-5xl font-bold mb-2 tracking-wide">ABDUL GOFUR</h1>
+              <div className="text-base md:text-xl font-light mb-2 md:mb-3">Full-stack Developer & Web Application Specialist</div>
+              <div className="text-xs md:text-sm italic opacity-90">Building scalable web applications with modern technologies</div>
+            </div>
           </div>
         </div>
 
@@ -323,10 +337,21 @@ export default function CVPage() {
             padding: 0.5rem 1rem !important;
           }
 
-          /* Minimal main content padding */
+          /* Optimize photo size for print */
+          .bg-gradient-to-r.from-purple-600 img {
+            width: 50px !important;
+            height: 50px !important;
+          }
+
+          .bg-gradient-to-r.from-purple-600 .flex.items-center {
+            gap: 0.75rem !important;
+          }
+
+          /* Force 2-column layout in print and reduce padding */
           .grid.grid-cols-1 {
             padding: 0.75rem !important;
             gap: 0.75rem !important;
+            grid-template-columns: 1fr 1fr !important;
           }
 
           /* Much smaller fonts for print */
