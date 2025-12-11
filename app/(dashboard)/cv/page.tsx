@@ -262,9 +262,9 @@ export default function CVPage() {
       {/* Print Styles */}
       <style jsx global>{`
         @media print {
-          /* Remove default margins and set page size */
+          /* Remove default margins and set page size to F4 */
           @page {
-            size: A4;
+            size: 210mm 330mm;
             margin: 0;
           }
 
@@ -291,6 +291,93 @@ export default function CVPage() {
           /* Remove shadow in print */
           .shadow-2xl {
             box-shadow: none !important;
+          }
+
+          /* Compact spacing for print */
+          .space-y-6 {
+            gap: 1rem !important;
+          }
+
+          .space-y-6 > * + * {
+            margin-top: 1rem !important;
+          }
+
+          .space-y-4 {
+            gap: 0.5rem !important;
+          }
+
+          .space-y-4 > * + * {
+            margin-top: 0.5rem !important;
+          }
+
+          .space-y-3 {
+            gap: 0.5rem !important;
+          }
+
+          .space-y-3 > * + * {
+            margin-top: 0.5rem !important;
+          }
+
+          /* Reduce header padding */
+          .bg-gradient-to-r.from-purple-600 {
+            padding: 1rem !important;
+          }
+
+          /* Reduce main content padding */
+          .grid.grid-cols-1 {
+            padding: 1rem !important;
+            gap: 1rem !important;
+          }
+
+          /* Smaller fonts for print */
+          h1 {
+            font-size: 2rem !important;
+            margin-bottom: 0.5rem !important;
+          }
+
+          h2 {
+            font-size: 1.25rem !important;
+            margin-bottom: 0.5rem !important;
+            padding-bottom: 0.25rem !important;
+          }
+
+          h3 {
+            font-size: 0.9rem !important;
+            margin-bottom: 0.5rem !important;
+          }
+
+          p, div {
+            font-size: 0.75rem !important;
+            line-height: 1.3 !important;
+          }
+
+          /* Compact project cards */
+          .bg-white.rounded-lg {
+            padding: 0.75rem !important;
+            margin-bottom: 0.5rem !important;
+          }
+
+          /* Smaller language circles */
+          .rounded-full.bg-gradient-to-br {
+            width: 3rem !important;
+            height: 3rem !important;
+            font-size: 0.7rem !important;
+          }
+
+          /* Compact skills boxes */
+          .bg-gradient-to-r.from-pink-50 {
+            padding: 0.5rem !important;
+          }
+
+          /* Reduce footer padding */
+          .text-center.p-3 {
+            padding: 0.5rem !important;
+          }
+
+          /* Reduce contact bar padding */
+          .flex.flex-wrap.gap-3 {
+            padding: 0.75rem !important;
+            gap: 0.5rem !important;
           }
 
           /* Ensure proper page breaks */
