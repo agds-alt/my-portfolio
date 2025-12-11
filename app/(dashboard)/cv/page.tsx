@@ -2,20 +2,20 @@
 
 export default function CVPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center p-6">
-      <div className="w-full max-w-[210mm] min-h-[330mm] bg-white shadow-2xl overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center p-2 md:p-6">
+      <div className="w-full md:max-w-[210mm] bg-white shadow-2xl overflow-hidden">
         {/* Header */}
-        <div className="bg-gradient-to-r from-purple-600 to-purple-800 text-white p-8 relative overflow-hidden">
+        <div className="bg-gradient-to-r from-purple-600 to-purple-800 text-white p-4 md:p-8 relative overflow-hidden">
           <div className="absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full"></div>
           <div className="relative z-10">
-            <h1 className="text-5xl font-bold mb-2 tracking-wide">ABDUL GOFUR</h1>
-            <div className="text-xl font-light mb-3">Full-stack Developer & Web Application Specialist</div>
-            <div className="text-sm italic opacity-90">Building scalable web applications with modern technologies</div>
+            <h1 className="text-3xl md:text-5xl font-bold mb-2 tracking-wide">ABDUL GOFUR</h1>
+            <div className="text-base md:text-xl font-light mb-2 md:mb-3">Full-stack Developer & Web Application Specialist</div>
+            <div className="text-xs md:text-sm italic opacity-90">Building scalable web applications with modern technologies</div>
           </div>
         </div>
 
         {/* Contact Bar */}
-        <div className="bg-gradient-to-r from-pink-500 to-red-500 text-white p-5 flex flex-wrap gap-6 text-xs">
+        <div className="bg-gradient-to-r from-pink-500 to-red-500 text-white p-3 md:p-5 flex flex-wrap gap-3 md:gap-6 text-xs">
           <div className="flex items-center gap-2">
             <span>📧</span>
             <a href="mailto:agdscid@gmail.com" className="hover:underline">agdscid@gmail.com</a>
@@ -39,13 +39,13 @@ export default function CVPage() {
         </div>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 p-4 md:p-8">
           {/* Left Column */}
           <div className="space-y-6">
             {/* About */}
             <div>
-              <h2 className="text-2xl font-bold text-purple-600 mb-3 pb-2 border-b-4 border-purple-600 inline-block">PROFIL</h2>
-              <p className="text-sm text-gray-600 leading-relaxed mt-3">
+              <h2 className="text-xl md:text-2xl font-bold text-purple-600 mb-3 pb-2 border-b-4 border-purple-600 inline-block">PROFIL</h2>
+              <p className="text-xs md:text-sm text-gray-600 leading-relaxed mt-3">
                 Saya Abdul Gofur, lahir di Majalengka 12 April 1994. Full-stack developer dengan 1+ tahun pengalaman
                 dalam membangun aplikasi web production-ready. Memiliki semangat kerja yang tinggi di bidang IT dan
                 passionate dalam menciptakan solusi yang scalable dan performant.
@@ -54,7 +54,7 @@ export default function CVPage() {
 
             {/* Education */}
             <div>
-              <h2 className="text-2xl font-bold text-pink-500 mb-3 pb-2 border-b-4 border-pink-500 inline-block">PENDIDIKAN</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-pink-500 mb-3 pb-2 border-b-4 border-pink-500 inline-block">PENDIDIKAN</h2>
               <div className="mt-3 space-y-4">
                 <div className="border-l-4 border-gray-300 pl-4 relative">
                   <div className="absolute -left-[7px] top-1 w-3 h-3 bg-purple-600 rounded-full"></div>
@@ -84,7 +84,7 @@ export default function CVPage() {
 
             {/* Experience */}
             <div>
-              <h2 className="text-2xl font-bold text-orange-500 mb-3 pb-2 border-b-4 border-orange-500 inline-block">PENGALAMAN KERJA</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-orange-500 mb-3 pb-2 border-b-4 border-orange-500 inline-block">PENGALAMAN KERJA</h2>
               <div className="mt-3 space-y-4">
                 <div className="border-l-4 border-gray-300 pl-4 relative">
                   <div className="absolute -left-[7px] top-1 w-3 h-3 bg-purple-600 rounded-full"></div>
@@ -112,7 +112,7 @@ export default function CVPage() {
           <div className="space-y-6">
             {/* Skills */}
             <div>
-              <h2 className="text-2xl font-bold text-blue-500 mb-3 pb-2 border-b-4 border-blue-500 inline-block">KEAHLIAN TEKNIS</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-blue-500 mb-3 pb-2 border-b-4 border-blue-500 inline-block">KEAHLIAN TEKNIS</h2>
               <div className="mt-3 space-y-3">
                 <div className="bg-gradient-to-r from-pink-50 to-red-50 p-3 rounded-lg border-l-4 border-red-500">
                   <div className="font-semibold text-sm text-gray-900">Frontend Development</div>
@@ -143,7 +143,7 @@ export default function CVPage() {
 
             {/* Languages */}
             <div>
-              <h2 className="text-2xl font-bold text-purple-600 mb-3 pb-2 border-b-4 border-purple-600 inline-block">BAHASA</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-purple-600 mb-3 pb-2 border-b-4 border-purple-600 inline-block">BAHASA</h2>
               <div className="mt-3 grid grid-cols-3 gap-4">
                 <div className="text-center">
                   <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-purple-600 to-purple-800 flex items-center justify-center text-white font-bold text-sm mb-2">
@@ -168,12 +168,12 @@ export default function CVPage() {
           </div>
 
           {/* Projects Section - Full Width */}
-          <div className="col-span-1 md:col-span-2 bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl mt-4">
-            <h2 className="text-2xl font-bold text-purple-600 mb-4 pb-2 border-b-4 border-purple-600 inline-block">PORTFOLIO PROYEK WEB</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
+          <div className="col-span-1 md:col-span-2 bg-gradient-to-br from-purple-50 to-purple-100 p-4 md:p-6 rounded-xl mt-4">
+            <h2 className="text-xl md:text-2xl font-bold text-purple-600 mb-4 pb-2 border-b-4 border-purple-600 inline-block">PORTFOLIO PROYEK WEB</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 mt-5">
               {/* Project 1 */}
-              <div className="bg-white rounded-lg p-5 shadow-lg border-t-4 border-purple-600 hover:-translate-y-1 transition-transform">
-                <h3 className="font-bold text-base mb-2">WC Check</h3>
+              <div className="bg-white rounded-lg p-4 md:p-5 shadow-lg border-t-4 border-purple-600 hover:-translate-y-1 transition-transform">
+                <h3 className="font-bold text-sm md:text-base mb-2">WC Check</h3>
                 <p className="text-xs text-gray-600 mb-3 leading-relaxed">
                   Professional Toilet Monitoring System dengan QR code scanning dan analytics real-time.
                   Meningkatkan efisiensi inspeksi hingga 70%.
@@ -193,8 +193,8 @@ export default function CVPage() {
               </div>
 
               {/* Project 2 */}
-              <div className="bg-white rounded-lg p-5 shadow-lg border-t-4 border-pink-500 hover:-translate-y-1 transition-transform">
-                <h3 className="font-bold text-base mb-2">AGDS Corp POS</h3>
+              <div className="bg-white rounded-lg p-4 md:p-5 shadow-lg border-t-4 border-pink-500 hover:-translate-y-1 transition-transform">
+                <h3 className="font-bold text-sm md:text-base mb-2">AGDS Corp POS</h3>
                 <p className="text-xs text-gray-600 mb-3 leading-relaxed">
                   Point of Sale & Warehouse Management System dengan modern tech stack.
                   Multi-outlet management dengan real-time inventory tracking.
@@ -214,8 +214,8 @@ export default function CVPage() {
               </div>
 
               {/* Project 3 */}
-              <div className="bg-white rounded-lg p-5 shadow-lg border-t-4 border-blue-500 hover:-translate-y-1 transition-transform">
-                <h3 className="font-bold text-base mb-2">Selisih Berat</h3>
+              <div className="bg-white rounded-lg p-4 md:p-5 shadow-lg border-t-4 border-blue-500 hover:-translate-y-1 transition-transform">
+                <h3 className="font-bold text-sm md:text-base mb-2">Selisih Berat</h3>
                 <p className="text-xs text-gray-600 mb-3 leading-relaxed">
                   Logistics Weight Audit System for J&T Express dengan GPS watermarking dan barcode scanning.
                   Database production: 25,000+ entries.
@@ -238,7 +238,7 @@ export default function CVPage() {
         </div>
 
         {/* Footer */}
-        <div className="bg-gradient-to-r from-purple-600 to-purple-800 text-white text-center p-5 text-xs">
+        <div className="bg-gradient-to-r from-purple-600 to-purple-800 text-white text-center p-3 md:p-5 text-xs">
           Portfolio: <a href="https://agds-dev.vercel.app" target="_blank" className="font-semibold hover:underline">agds-dev.vercel.app</a> |
           Created with ❤️ by Abdul Gofur | 2025
         </div>
