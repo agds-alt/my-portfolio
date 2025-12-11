@@ -1,5 +1,6 @@
 import { Sidebar } from "@/components/layout/Sidebar";
 import { ThemeToggle } from "@/components/layout/ThemeToggle";
+import { PWAInstallPrompt } from "@/components/PWAInstallPrompt";
 
 export default function DashboardLayout({
   children,
@@ -9,6 +10,7 @@ export default function DashboardLayout({
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-black">
       <Sidebar />
+      <PWAInstallPrompt />
 
       {/* Main Content */}
       <main className="lg:ml-[var(--sidebar-width,280px)] min-h-screen transition-all duration-300">
