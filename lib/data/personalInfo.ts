@@ -20,8 +20,8 @@ export const personalInfo = {
   },
 
   stats: {
-    experience: "1+ Year",
-    projectsCompleted: "3+",
-    technologiesMastered: "15+"
+    experience: "1",
+    projectsCompleted: "3",
+    technologiesMastered: "15"
   }
 };

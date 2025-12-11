@@ -29,9 +29,21 @@ export default function DashboardPage() {
       {/* Stats */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {[
-          { icon: Briefcase, label: t.experience, value: personalInfo.stats.experience },
-          { icon: Code, label: t.projects, value: personalInfo.stats.projectsCompleted },
-          { icon: TrendingUp, label: t.technologies, value: personalInfo.stats.technologiesMastered }
+          {
+            icon: Briefcase,
+            label: t.experience,
+            value: `${personalInfo.stats.experience}+ ${personalInfo.stats.experience === "1" ? t.year : t.years}`
+          },
+          {
+            icon: Code,
+            label: t.projects,
+            value: `${personalInfo.stats.projectsCompleted}+`
+          },
+          {
+            icon: TrendingUp,
+            label: t.technologies,
+            value: `${personalInfo.stats.technologiesMastered}+`
+          }
         ].map((stat, index) => (
           <motion.div
             key={stat.label}

@@ -37,6 +37,10 @@ export const translations = {
 
     // Profile
     fullstackDev: "Full-stack Dev",
+
+    // Stats Values
+    year: "Year",
+    years: "Years",
   },
   id: {
     // Dashboard
@@ -76,6 +80,10 @@ export const translations = {
 
     // Profile
     fullstackDev: "Full-stack Dev",
+
+    // Stats Values
+    year: "Tahun",
+    years: "Tahun",
   }
 };
 
