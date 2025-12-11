@@ -293,91 +293,151 @@ export default function CVPage() {
             box-shadow: none !important;
           }
 
-          /* Compact spacing for print */
+          /* Ultra compact spacing for print */
           .space-y-6 {
-            gap: 1rem !important;
+            gap: 0.5rem !important;
           }
 
           .space-y-6 > * + * {
-            margin-top: 1rem !important;
+            margin-top: 0.5rem !important;
           }
 
           .space-y-4 {
-            gap: 0.5rem !important;
+            gap: 0.25rem !important;
           }
 
           .space-y-4 > * + * {
-            margin-top: 0.5rem !important;
+            margin-top: 0.25rem !important;
           }
 
           .space-y-3 {
-            gap: 0.5rem !important;
+            gap: 0.25rem !important;
           }
 
           .space-y-3 > * + * {
-            margin-top: 0.5rem !important;
+            margin-top: 0.25rem !important;
           }
 
-          /* Reduce header padding */
+          /* Minimal header padding */
           .bg-gradient-to-r.from-purple-600 {
-            padding: 1rem !important;
+            padding: 0.5rem 1rem !important;
           }
 
-          /* Reduce main content padding */
+          /* Minimal main content padding */
           .grid.grid-cols-1 {
-            padding: 1rem !important;
-            gap: 1rem !important;
+            padding: 0.75rem !important;
+            gap: 0.75rem !important;
           }
 
-          /* Smaller fonts for print */
+          /* Much smaller fonts for print */
           h1 {
-            font-size: 2rem !important;
-            margin-bottom: 0.5rem !important;
+            font-size: 1.5rem !important;
+            margin-bottom: 0.25rem !important;
+            line-height: 1.2 !important;
           }
 
           h2 {
-            font-size: 1.25rem !important;
-            margin-bottom: 0.5rem !important;
-            padding-bottom: 0.25rem !important;
+            font-size: 1rem !important;
+            margin-bottom: 0.25rem !important;
+            padding-bottom: 0.125rem !important;
+            border-bottom-width: 2px !important;
           }
 
           h3 {
-            font-size: 0.9rem !important;
-            margin-bottom: 0.5rem !important;
+            font-size: 0.75rem !important;
+            margin-bottom: 0.25rem !important;
           }
 
           p, div {
-            font-size: 0.75rem !important;
-            line-height: 1.3 !important;
+            font-size: 0.65rem !important;
+            line-height: 1.2 !important;
+            margin-bottom: 0 !important;
           }
 
-          /* Compact project cards */
+          /* Ultra compact project cards */
           .bg-white.rounded-lg {
-            padding: 0.75rem !important;
-            margin-bottom: 0.5rem !important;
+            padding: 0.5rem !important;
+            margin-bottom: 0.25rem !important;
           }
 
-          /* Smaller language circles */
+          /* Much smaller language circles */
           .rounded-full.bg-gradient-to-br {
-            width: 3rem !important;
-            height: 3rem !important;
-            font-size: 0.7rem !important;
+            width: 2.5rem !important;
+            height: 2.5rem !important;
+            font-size: 0.6rem !important;
           }
 
-          /* Compact skills boxes */
+          /* Minimal skills boxes padding */
           .bg-gradient-to-r.from-pink-50 {
-            padding: 0.5rem !important;
+            padding: 0.35rem !important;
+            margin-bottom: 0.25rem !important;
           }
 
-          /* Reduce footer padding */
+          /* Minimal footer padding */
           .text-center.p-3 {
-            padding: 0.5rem !important;
+            padding: 0.35rem !important;
           }
 
-          /* Reduce contact bar padding */
+          /* Minimal contact bar padding */
           .flex.flex-wrap.gap-3 {
-            padding: 0.75rem !important;
+            padding: 0.5rem !important;
+            gap: 0.35rem !important;
+          }
+
+          /* Remove decorative circle in header */
+          .absolute.-top-20 {
+            display: none !important;
+          }
+
+          /* Reduce border thickness */
+          .border-l-4 {
+            border-left-width: 2px !important;
+            padding-left: 0.5rem !important;
+          }
+
+          .border-b-4 {
+            border-bottom-width: 2px !important;
+          }
+
+          .border-t-4 {
+            border-top-width: 2px !important;
+          }
+
+          /* Compact timeline dots */
+          .absolute.w-3.h-3 {
+            width: 0.5rem !important;
+            height: 0.5rem !important;
+            left: -0.3rem !important;
+          }
+
+          /* Reduce project section padding */
+          .bg-gradient-to-br.from-purple-50 {
+            padding: 0.5rem !important;
+            margin-top: 0.5rem !important;
+          }
+
+          /* Make project grid more compact */
+          .grid.grid-cols-1.md\\:grid-cols-3 {
             gap: 0.5rem !important;
+          }
+
+          /* Compact tag badges */
+          .bg-gradient-to-r.from-purple-600.to-purple-800 {
+            padding: 0.125rem 0.35rem !important;
+            font-size: 0.5rem !important;
+          }
+
+          /* Reduce all rounded corners for cleaner look */
+          .rounded-lg {
+            border-radius: 0.25rem !important;
+          }
+
+          .rounded-xl {
+            border-radius: 0.25rem !important;
+          }
+
+          .rounded-2xl {
+            border-radius: 0.25rem !important;
           }
 
           /* Ensure proper page breaks */
