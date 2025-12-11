@@ -18,36 +18,40 @@ import {
 } from "lucide-react";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { AvatarImage } from "@/components/AvatarImage";
-
-const sidebarItems = [
-  { name: "Home", href: "/", icon: Home },
-  { name: "About", href: "/about", icon: User },
-  {
-    name: "Completed Projects",
-    icon: FolderOpen,
-    children: [
-      { name: "WC Check", href: "/projects/wc-check" },
-      { name: "AGDS Corp POS", href: "/projects/agds-pos" },
-      { name: "Selisih Berat", href: "/projects/selisih-berat" }
-    ]
-  },
-  {
-    name: "Ongoing Projects",
-    icon: FolderClosed,
-    children: [
-      { name: "AGDS POS v2.0", href: "/ongoing/agds-pos-v2" },
-      { name: "SaaS Boilerplate", href: "/ongoing/personal-saas" },
-      { name: "IoT Monitoring", href: "/ongoing/monitoring-platform" }
-    ]
-  },
-  { name: "Contact", href: "/contact", icon: Mail }
-];
+import { useLanguage } from "@/lib/context/LanguageContext";
+import { translations } from "@/lib/translations";
 
 export function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const [expandedItems, setExpandedItems] = useState<string[]>(["Completed Projects", "Ongoing Projects"]);
+  const { language } = useLanguage();
+  const t = translations[language];
+  const [expandedItems, setExpandedItems] = useState<string[]>([t.completedProjects, t.ongoingProjects]);
   const pathname = usePathname();
+
+  const sidebarItems = [
+    { name: t.home, href: "/", icon: Home },
+    { name: t.about, href: "/about", icon: User },
+    {
+      name: t.completedProjects,
+      icon: FolderOpen,
+      children: [
+        { name: t.wcCheck, href: "/projects/wc-check" },
+        { name: t.agdsPos, href: "/projects/agds-pos" },
+        { name: t.selisihBerat, href: "/projects/selisih-berat" }
+      ]
+    },
+    {
+      name: t.ongoingProjects,
+      icon: FolderClosed,
+      children: [
+        { name: t.agdsPosV2, href: "/ongoing/agds-pos-v2" },
+        { name: t.saasBoilerplate, href: "/ongoing/personal-saas" },
+        { name: t.iotMonitoring, href: "/ongoing/monitoring-platform" }
+      ]
+    },
+    { name: t.contact, href: "/contact", icon: Mail }
+  ];
 
   // Update CSS variable when sidebar state changes
   useEffect(() => {
@@ -74,7 +78,7 @@ export function Sidebar() {
           {isOpen && (
             <Link href="/" className="min-w-0">
               <h2 className="font-bold text-sm truncate">Abdul Gofur</h2>
-              <p className="text-xs text-zinc-500 dark:text-zinc-400 truncate">Full-stack Dev</p>
+              <p className="text-xs text-zinc-500 dark:text-zinc-400 truncate">{t.fullstackDev}</p>
             </Link>
           )}
         </div>

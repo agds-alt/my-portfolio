@@ -26,6 +26,17 @@ export const translations = {
     home: "Home",
     about: "About",
     contact: "Contact",
+
+    // Sidebar Projects
+    wcCheck: "WC Check",
+    agdsPos: "AGDS Corp POS",
+    selisihBerat: "Selisih Berat",
+    agdsPosV2: "AGDS POS v2.0",
+    saasBoilerplate: "SaaS Boilerplate",
+    iotMonitoring: "IoT Monitoring",
+
+    // Profile
+    fullstackDev: "Full-stack Dev",
   },
   id: {
     // Dashboard
@@ -54,6 +65,17 @@ export const translations = {
     home: "Beranda",
     about: "Tentang",
     contact: "Kontak",
+
+    // Sidebar Projects
+    wcCheck: "WC Check",
+    agdsPos: "AGDS Corp POS",
+    selisihBerat: "Selisih Berat",
+    agdsPosV2: "AGDS POS v2.0",
+    saasBoilerplate: "SaaS Boilerplate",
+    iotMonitoring: "IoT Monitoring",
+
+    // Profile
+    fullstackDev: "Full-stack Dev",
   }
 };
 
